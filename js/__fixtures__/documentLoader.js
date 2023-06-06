@@ -11,27 +11,9 @@ const documentLoader = documentLoaderFactory.pluginFactory
   .addContext({
     'https://www.w3.org/ns/did/v1': require('../__fixtures__/contexts/did-v1.json'),
     'https://www.w3.org/2018/credentials/v2': require('../__fixtures__/contexts/credentials-v2-unstable.json'),
-    'https://w3id.org/security/v1': JSON.parse(
-      fs
-        .readFileSync(
-          path.resolve(__dirname, '../../contexts/security-v1.jsonld')
-        )
-        .toString()
-    ),
-    'https://w3id.org/security/v2': JSON.parse(
-      fs
-        .readFileSync(
-          path.resolve(__dirname, '../../contexts/security-v2.jsonld')
-        )
-        .toString()
-    ),
-    'https://w3id.org/security/v3-unstable': JSON.parse(
-      fs
-        .readFileSync(
-          path.resolve(__dirname, '../../contexts/security-v3-unstable.jsonld')
-        )
-        .toString()
-    ),
+    'https://w3id.org/security/v1': require('../contexts/security-v1.js').SECURITY_CONTEXT_V1,
+    'https://w3id.org/security/v2': require('../contexts/security-v2.js').SECURITY_CONTEXT_V2,
+    'https://w3id.org/security/v3-unstable': require('../contexts/security-v3-unstable.js').SECURITY_CONTEXT_V3,
     'https://w3id.org/citizenship/v1': require('../__fixtures__/contexts/citizenship-v1.json'),
   })
   .addResolver({

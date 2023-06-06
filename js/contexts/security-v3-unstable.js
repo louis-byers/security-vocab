@@ -1,4 +1,6 @@
-{
+'use strict';
+
+exports.SECURITY_CONTEXT_V3 = {
   "@context": [{
     "@version": 1.1,
     "id": "@id",

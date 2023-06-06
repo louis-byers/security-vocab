@@ -1,4 +1,6 @@
-{
+'use strict';
+
+exports.SECURITY_CONTEXT_V1 = {
   "@context": {
     "id": "@id",
     "type": "@type",

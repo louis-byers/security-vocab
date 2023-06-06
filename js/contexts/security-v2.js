@@ -1,4 +1,6 @@
-{
+'use strict';
+
+exports.SECURITY_CONTEXT_V2 = {
   "@context": [{
     "@version": 1.1
   }, "https://w3id.org/security/v1", {
